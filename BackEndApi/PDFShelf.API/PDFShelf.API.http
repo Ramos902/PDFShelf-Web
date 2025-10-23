@@ -1,0 +1,6 @@
+@PDFShelf.API_HostAddress = http://localhost:5212
+
+GET {{PDFShelf.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
