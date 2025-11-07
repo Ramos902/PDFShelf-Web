@@ -3603,25 +3603,32 @@
     ]
   },
   "packageFolders": {
-    "/home/ramos/.nuget/packages/": {}
+    "C:\\Users\\Ramos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ramos/Documents/GitRepos/PDFShelf/PDFShelf/BackEndApi/PDFShelf.API/PDFShelf.API.csproj",
+      "projectUniqueName": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
       "projectName": "PDFShelf.API",
-      "projectPath": "/home/ramos/Documents/GitRepos/PDFShelf/PDFShelf/BackEndApi/PDFShelf.API/PDFShelf.API.csproj",
-      "packagesPath": "/home/ramos/.nuget/packages/",
-      "outputPath": "/home/ramos/Documents/GitRepos/PDFShelf/PDFShelf/BackEndApi/PDFShelf.API/obj/",
+      "projectPath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
+      "packagesPath": "C:\\Users\\Ramos\\.nuget\\packages\\",
+      "outputPath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/ramos/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ramos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "/usr/lib/dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3640,7 +3647,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -3696,7 +3703,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.111/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

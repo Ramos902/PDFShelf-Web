@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using PDFShelf.Api.Data;
 using PDFShelf.Api.Models;
+using PDFShelf.Api.Endpoints;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +21,10 @@ builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+//Mapeia endpoints
+app.MapTestDbEdnpoints();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
