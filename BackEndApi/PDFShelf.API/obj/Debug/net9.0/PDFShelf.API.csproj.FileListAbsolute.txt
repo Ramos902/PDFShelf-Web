@@ -284,3 +284,4 @@ C:\Documentos Ramos\Projects\PDFShelf\PDFShelf\BackEndApi\PDFShelf.API\obj\Debug
 C:\Documentos Ramos\Projects\PDFShelf\PDFShelf\BackEndApi\PDFShelf.API\obj\Debug\net9.0\PDFShelf.API.pdb
 C:\Documentos Ramos\Projects\PDFShelf\PDFShelf\BackEndApi\PDFShelf.API\obj\Debug\net9.0\PDFShelf.API.genruntimeconfig.cache
 C:\Documentos Ramos\Projects\PDFShelf\PDFShelf\BackEndApi\PDFShelf.API\obj\Debug\net9.0\ref\PDFShelf.API.dll
+C:\Documentos Ramos\Projects\PDFShelf\PDFShelf\BackEndApi\PDFShelf.API\bin\Debug\net9.0\PDFShelf.API.staticwebassets.runtime.json
