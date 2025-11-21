@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FdZLk5x3x7c=",
+  "dgSpecHash": "YwguFFC7h+k=",
   "success": true,
-  "projectFilePath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
+  "projectFilePath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ramos\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Ramos\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

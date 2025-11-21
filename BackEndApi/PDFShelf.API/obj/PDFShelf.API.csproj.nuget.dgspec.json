@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj": {}
+    "C:\\Documentos Ramos\\Projects\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj": {}
   },
   "projects": {
-    "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj": {
+    "C:\\Documentos Ramos\\Projects\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
+        "projectUniqueName": "C:\\Documentos Ramos\\Projects\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
         "projectName": "PDFShelf.API",
-        "projectPath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
+        "projectPath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\BackEndApi\\PDFShelf.API\\PDFShelf.API.csproj",
         "packagesPath": "C:\\Users\\Ramos\\.nuget\\packages\\",
-        "outputPath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\PDFShelf\\BackEndApi\\PDFShelf.API\\obj\\",
+        "outputPath": "C:\\Documentos Ramos\\Projects\\PDFShelf\\BackEndApi\\PDFShelf.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

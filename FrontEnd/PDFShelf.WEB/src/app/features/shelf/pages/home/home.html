@@ -1,0 +1,61 @@
+<div class="shelf-container">
+  
+  <!-- Cabeçalho com Título e Área de Upload -->
+  <header class="shelf-header">
+    <h1>Minha Biblioteca</h1>
+    
+    <div class="upload-box">
+      <input 
+        type="file" 
+        accept="application/pdf" 
+        (change)="onFileSelected($event)" 
+        #fileInput
+      >
+      
+      <!-- Só mostra os campos de título/botão se um arquivo for selecionado -->
+      @if (selectedFile) {
+        <div class="upload-actions">
+          <input 
+            type="text" 
+            [(ngModel)]="newPdfTitle" 
+            placeholder="Título do PDF"
+            class="title-input"
+          >
+          <button 
+            (click)="upload()" 
+            [disabled]="isUploading()" 
+            class="btn-upload"
+          >
+            {{ isUploading() ? 'Enviando...' : 'Salvar PDF' }}
+          </button>
+        </div>
+      }
+    </div>
+  </header>
+
+  <!-- Lista de PDFs -->
+  <div class="pdf-grid">
+    @if (isLoading()) {
+      <p>Carregando seus livros...</p>
+    } @else if (pdfs().length === 0) {
+      <div class="empty-state">
+        <p>Sua prateleira está vazia. Adicione seu primeiro PDF!</p>
+      </div>
+    } @else {
+      @for (pdf of pdfs(); track pdf.id) {
+        <div class="pdf-card">
+          <!-- Ícone ou Thumbnail (Placeholder por enquanto) -->
+          <div class="card-thumb">
+            📄
+          </div>
+          <div class="card-info">
+            <h3>{{ pdf.title }}</h3>
+            <span class="meta">{{ pdf.pageCount }} páginas • {{ pdf.fileSizeMB }} MB</span>
+            <span class="date">Enviado em {{ pdf.uploadedAt | date:'shortDate' }}</span>
+          </div>
+        </div>
+      }
+    }
+  </div>
+
+</div>
