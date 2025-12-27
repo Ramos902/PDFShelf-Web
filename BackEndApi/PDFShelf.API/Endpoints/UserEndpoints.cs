@@ -10,7 +10,7 @@ namespace PDFShelf.Api.Endpoints
     {
         public static void MapUserEndpoints(this WebApplication app)
         {
-            var group = app.MapGroup("/api/users").WithTags("Users"); // <--- adiciona tag no Swagger
+            var group = app.MapGroup("/api/users").WithTags("Users");
 
             group.MapPost("/register", async (AppDbContext db, PasswordHasher hasher, UserRegisterDto request) =>
             {
