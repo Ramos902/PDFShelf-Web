@@ -20,8 +20,6 @@ export const routes: Routes = [
   // 5. ROTA DA "PRATELEIRA" PRIVADA (O app em si)
   {
     path: 'shelf', 
-    // CORREÇÃO IMPORTANTE: Mudado de 'm.DashboardModule' para 'm.ShelfModule'
-    // para bater com o nome da classe que renomeamos no arquivo shelf-module.ts
     loadChildren: () => import('./features/shelf/shelf-module').then(m => m.ShelfModule), 
     canActivate: [authGuard]
   },
