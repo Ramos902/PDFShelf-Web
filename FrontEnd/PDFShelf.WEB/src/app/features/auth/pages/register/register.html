@@ -1,58 +1,64 @@
-<div class="login-container">
-  <div class="login-box">
-    <h1 class="login-title">Crie sua Conta</h1>
-    <p class="login-subtitle">Comece a organizar seus PDFs agora mesmo</p>
+<main class="flex h-full items-center justify-center px-4 font-sans">
 
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+  <div class="w-full max-w-[400px] rounded-lg p-10 shadow-md">
+    <h1 class="mb-2 text-center text-3xl">Crie sua Conta</h1>
+    <p class="mb-8 text-center text-base">Comece a organizar seus PDFs agora mesmo</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate class="flex flex-col gap-4">
 
       <!-- Campo de Nome -->
       <div class="form-field">
         <label for="name">Nome</label>
         <input id="name" type="text" formControlName="name" placeholder="Seu nome completo"
-               [class.invalid]="isFieldInvalid('name')">
+          [class.invalid]="isFieldInvalid('name')">
         @if (isFieldInvalid('name')) {
-          <small class="error-message">{{ getErrorMessage('name') }}</small>
+        <small class="error-message">{{ getErrorMessage('name') }}</small>
         }
       </div>
 
       <!-- Campo de E-mail -->
-      <div class="form-field">
-        <label for="email">E-mail</label>
+      <div class="flex flex-col">
+        <label for="email" class="mb-2 text-sm font-semibold">E-mail</label>
         <input id="email" type="email" formControlName="email" placeholder="seu.email@exemplo.com"
-               [class.invalid]="isFieldInvalid('email')">
+          class="w-full rounded-md border px-4 py-3 transition-all focus:outline-none focus:ring-2"
+          [class.input-error]="isFieldInvalid('email')">
         @if (isFieldInvalid('email')) {
-          <small class="error-message">{{ getErrorMessage('email') }}</small>
+        <small class="mt-1 text-sm">{{ getErrorMessage('email') }}</small>
         }
       </div>
 
       <!-- Campo de Senha -->
-      <div class="form-field">
-        <label for="password">Senha</label>
-        <input id="password" type="password" formControlName="password" placeholder="Mínimo 6 caracteres"
-               [class.invalid]="isFieldInvalid('password')">
+      <div class="flex flex-col">
+        <label for="password" class="mb-2 text-sm font-semibold">Senha</label>
+        <input id="password" type="password" formControlName="password" placeholder="••••••••"
+          class="w-full rounded-md border px-4 py-3 transition-all focus:outline-none focus:ring-2"
+          [class.input-error]="isFieldInvalid('password')">
         @if (isFieldInvalid('password')) {
-          <small class="error-message">{{ getErrorMessage('password') }}</small>
+        <small class="mt-1 text-sm">{{ getErrorMessage('password') }}</small>
         }
       </div>
 
       <!-- Mensagem de Erro da API -->
       @if (apiError) {
-        <div class="api-error">
-          {{ apiError }}
-        </div>
+      <div class="mt-2 rounded-md p-3 text-center text-sm">
+        {{ apiError }}
+      </div>
       }
 
       <!-- Botão de Enviar -->
-      <button type="submit" class="submit-button" [disabled]="registerForm.invalid">
+      <button type="submit-button" [disabled]="registerForm.invalid"
+        class="mt-4 w-full cursor-pointer rounded-md p-3.5 text-base font-semibold transition active:scale-95 disabled:cursor-not-allowed">
         Criar Conta
       </button>
-
     </form>
 
-    <div class="register-link">
-      <p>Já tem uma conta? <a routerLink="/auth/login">Faça o login</a></p>
+    <div class="mt-6 text-center text-sm">
+      <p>Já tem uma conta?
+        <a routerLink="/auth/login" class="cursor-pointer font-semibold hover:underline">
+          Faça Log-in
+        </a>
+      </p>
     </div>
 
   </div>
-</div>
-<p>register works!</p>
+</main>

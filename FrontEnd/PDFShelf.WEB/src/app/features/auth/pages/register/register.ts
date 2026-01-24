@@ -16,7 +16,7 @@ import { UserRegisterDto } from '../../../../core/models/user-model';
   templateUrl: './register.html',
   styleUrls: ['./register.scss']
 })
-export class Register {
+export class RegisterComponent {
   // Injeção de dependências moderna
   private fb = inject(FormBuilder);
   private authService = inject(AuthService);
@@ -51,8 +51,6 @@ export class Register {
       }
     });
   }
-
-  // --- Métodos de Ajuda para o Template ---
 
   isFieldInvalid(fieldName: string): boolean {
     const control = this.registerForm.get(fieldName);

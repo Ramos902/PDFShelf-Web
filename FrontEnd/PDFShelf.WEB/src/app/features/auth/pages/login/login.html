@@ -1,41 +1,48 @@
-<main class="login-container h-full">
-    <div class="login-box">
-        <h1 class="login-title">ReadShelf</h1>
-        <p class="login-subtitle">Acesse sua prateleira de PDFs</p>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
-            <!--Email-->
-            <div class="form-field">
-                <label for="email">E-mail</label>
-                <input id="email" type="email" formControlName="email" placeholder="seu.email@exemplo.com"
-                    [class.invalid]="isFieldInvalid('email')">
-                @if (isFieldInvalid('email')) {
-                <small class="error-message">{{ getErrorMessage('email') }}</small>
-                }
-            </div>
-            <!--Password-->
-            <div class="form-field">
-                <label for="password">Senha</label>
-                <input id="password" type="password" formControlName="password" placeholder="••••••••"
-                    [class.invalid]="isFieldInvalid('password')">
-                @if (isFieldInvalid('password')) {
-                <small class="error-message">{{ getErrorMessage('password') }}</small>
-                }
-            </div>
-            <!-- Mensagem de Erro da API -->
-            @if (apiError) {
-            <div class="api-error">
-                {{ apiError }}
-            </div>
-            }
-            <button type="submit" class="submit-button" [disabled]="loginForm.invalid">
-                Entrar
-            </button>
+<main class="flex h-full items-center justify-center px-4 font-sans">
 
-        </form>
+  <div class="w-full max-w-[400px] rounded-lg p-10 shadow-md var(--foreground)">
+    <h1 class="mb-2 text-center text-3xl">ReadShelf</h1>
+    <p class="mb-8 text-center text-base">Acesse sua prateleira de PDFs</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate class="flex flex-col gap-4">
 
-        <div class="register-link">
-            <p>Não tem uma conta? <a>Registre-se</a></p>
-            <!-- (Vamos fazer o registro funcionar no futuro) -->
-        </div>
+      <div class="flex flex-col">
+        <label for="email" class="mb-2 text-sm font-semibold">E-mail</label>
+        <input id="email" type="email" formControlName="email" placeholder="seu.email@exemplo.com"
+          class="w-full rounded-md border px-4 py-3 transition-all focus:outline-none focus:ring-2"
+          [class.input-error]="isFieldInvalid('email')">
+        @if (isFieldInvalid('email')) {
+        <small class="mt-1 text-sm">{{ getErrorMessage('email') }}</small>
+        }
+      </div>
+
+      <div class="flex flex-col">
+        <label for="password" class="mb-2 text-sm font-semibold">Senha</label>
+        <input id="password" type="password" formControlName="password" placeholder="••••••••"
+          class="w-full rounded-md border px-4 py-3 transition-all focus:outline-none focus:ring-2"
+          [class.input-error]="isFieldInvalid('password')">
+        @if (isFieldInvalid('password')) {
+        <small class="mt-1 text-sm">{{ getErrorMessage('password') }}</small>
+        }
+      </div>
+
+      @if (apiError) {
+      <div class="mt-2 rounded-md p-3 text-center text-sm">
+        {{ apiError }}
+      </div>
+      }
+
+      <button type="submit" [disabled]="loginForm.invalid"
+        class="mt-4 w-full cursor-pointer rounded-md p-3.5 text-base font-semibold transition active:scale-95 disabled:cursor-not-allowed">
+        Entrar
+      </button>
+    </form>
+
+    <div class="mt-6 text-center text-sm">
+      <p>Não tem uma conta?
+        <a routerLink="/auth/register" class="cursor-pointer font-semibold hover:underline">
+          Registre-se
+        </a>
+      </p>
     </div>
+  </div>
 </main>
